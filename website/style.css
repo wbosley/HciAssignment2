@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Work+Sans:wght@700&display=swap');
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family:Arial;
+
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.logo {
+    max-height:40px;
+}
+
+.logoLink {
+    padding:22.5px 20px;
+}
+
+.logoListItem {
+    float:right;
+}

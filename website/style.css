@@ -39,3 +39,28 @@ li a:hover {
 .logoListItem {
     float:right;
 }
+
+p {
+    font-family:Arial;
+}
+
+h1 {
+    font-family:'Poppins', sans-serif;
+    font-size: 45px;
+}
+
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 2px solid #5a5a5a;
+    border-radius: 2px;
+}
+
+input:focus {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 2px solid hotpink;
+}

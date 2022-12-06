@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Work+Sans:wght@700&display=swap');
 
 
-ul {
+.mainNav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
+
 
 li {
     float: left;
@@ -38,6 +41,30 @@ li a:hover {
 
 .logoListItem {
     float:right;
+}
+
+
+aside {
+    background-color: #999999;
+}
+
+.asideNav {
+    list-style-type: none;
+}
+
+.asideNav li {
+    float: left;
+}
+
+.asideNav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Arial;
+
 }
 
 p {

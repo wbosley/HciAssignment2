@@ -6,15 +6,24 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<ul>
-    <li><a class="active" href="#home">Report a fault</a></li>
+<nav>
+<ul class = "mainNav">
+    <li><a class="active" href="#home">Reporting faults</a></li>
     <li><a href="#news2">Administrate faults</a></li>
     <li><a href="#contact">Update fault status</a></li>
     <li class = "logoListItem"><a class="active logoLink" href="#index"><img class = "logo" src = "photos/uealogowhite.png"></a></li>
 </ul>
-<div style = "display: flex; justify-content:center">
+</nav>
+<section style = "display: flex; justify-content:center; border: 1px solid blue;">
     <!-- todo remove the border from the div below before the final upload-->
-<div style = "border:1px solid white; max-width: 80vw;">
+    <aside>
+        <ul class = "asideNav" style = "border: 1px solid green">
+            <li class = "asideListItem" style = "border: 1px solid green"><a class="active" href="#home">Report a fault</a></li>
+            <li class = "asideListItem"><a href="#news2">My tickets</a></li>
+        </ul>
+    </aside>
+<div style = "border:1px solid red; max-width: 80vw; padding: 0px 40px;">
+
     <h1> Reporting a fault</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
     molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -51,6 +60,6 @@
     </form>
 
 </div>
-</div>
+</section>
 </body>
 </html>

@@ -92,6 +92,60 @@
                 </div>
             </div>
         </div>
+        <div id = "lowerDetailsDiv" style = "display:flex; flex-direction: column">
+            <div class = "map">
+                <p style = "margin:10px;"><i>Click to collapse map:</i></p> <br>
+                <img style = "width:45vw" src="photos/map.png"></img>
+            </div>
+            <div class = "form">
+                <fieldset>
+                    <legend>To do:</legend>
+                    <form class = "detailsForm">
+                        <label for = "urgencies">
+                            *Please select a priority level for the fault: <img style="align-self: center; cursor: help;" src="photos/questionmark.png"> <i style="cursor: help;">(The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here</a>)</i><br>
+                        </label>
+                        <input list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required>
+                        <datalist id="urgencies">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                            <option value="5">
+                        </datalist>
+                        <br>
+                        <label for = "timeToFix">
+                            *Time needed to fix (minutes):
+                        </label>
+                        <input id = "timeToFix" type = number min = "1" max = "6000" value = "30" required>
+                        <br>
+                        <!-- The miniFieldSet and miniLegend classes are for stylin fieldsets within fieldsets.-->
+                        <fieldset class = "miniFieldSet">
+                            <legend class = "miniLegend">*General time window within which the fault needs to be fixed at some point:</legend>
+                            <label for = "startDate">Start of time window:</label><br>
+                            <input type = "date" id = "startDate"><br>
+                            <label for = "endDate">End of time window:</label><br>
+                            <input type = "date" id = "endDate"><br>
+                        </fieldset>
+                        <br>
+                        <label for = "technicans">
+                            *Assign technicians to fix this fault:<br>
+                        </label>
+                        <input list="technicans" name="technicans" placeholder = "Andy" value = "Andy" type = "text" required>
+                        <datalist id="technicans">
+                            <option value="Andy">
+                            <option value="Bob">
+                            <option value="Chloe">
+                            <option value="Delia">
+                            <option value="Eric">
+                        </datalist>
+                        <br>
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </fieldset>
+            </div>
+
+        </div>
     </div>
     </div>
 </div>

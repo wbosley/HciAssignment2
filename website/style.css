@@ -256,8 +256,27 @@ input:focus {
     margin: 5px;
 }
 
+
 .card-status > p{
     margin-right: 80px;
 
+}
+
+
+.detailsForm label{
+    margin:5px;
+}
+
+.detailsForm input{
+    margin:5px;
+    margin-bottom:10px;
+}
+
+/* The miniFieldSet and miniLegend classes are for stylin fieldsets within fieldsets.*/
+.miniFieldSet{
+    border: 1px solid lightgray;
+}
+.miniLegend{
+    font-size: 16px; margin:0px;
 }
 

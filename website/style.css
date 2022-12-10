@@ -256,3 +256,8 @@ input:focus {
     margin: 5px;
 }
 
+.card-status > p{
+    margin-right: 80px;
+
+}
+

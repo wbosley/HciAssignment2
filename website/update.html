@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Uea Estates Faults Services</title>
     <link href="style.css" rel="stylesheet">
+    <script src="scripts.js"></script>
 </head>
 <body>
 <nav>
@@ -23,53 +24,72 @@
         </ul>
     </aside>
     <!-- THE DIV BELOW CONTAINS ALL CONTENT WHICH NEEDS TO BE CHANGED (e.g. content that is not UI) -->
-    <div style = "border:1px solid red; max-width: 80vw; padding: 0px 40px;">
+    <div id ="admin-top" style = "border:1px solid red; max-width: 80vw; padding: 0px 40px; display:flex; flex-direction: column;">
+        <div id="top-row" style="display:flex; flex-direction: row;">
+            <div><p id="breadcrumbs"><b>Update fault status > <u>Incomplete</u></b></p></div>
+            <div class="dropdown">
+                <p>SORT BY: Urgency</p>
+                <div class="dropdown-elements">
+                    <div>Most recent</div>
+                    <div>Least recent</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <p>FILTERS</p>
+                <div class="dropdown-elements">
+                    <div>filter</div>
+                    <div>filter2</div>
+                    <div>filter3</div>
+                </div>
+            </div>
 
-        <h1> Reporting a fault</h1>
-
-        <p>This form is for reporting faults to the UEA estates team so we can get them fixed. Please try to give as much useful detail as you can to help us locate and fix the problem.
-        <p><i>An asterisk ( * ) indicates an answer is required before this form can be submitted.</i></p>
-        </p>
-
-        <form>
-            <!-- TODO Add accessibility options to stop form submitting without information.-->
-            <fieldset>
-                <legend>Location</legend>
-                <label for="location-text">*Describe, in as much detail as you can, the location of the fault:</label><br>
-                <textarea type="text" id="location-text" rows="4" cols="50" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
-                <p>If you wish, click the map and select the place where the fault occurred.</p>
-                <img style = "width:30vw" src="photos/map.png"></img>
-                <br>
-                <label for="location-room">If the fault has occurred indoors and you know the room number, please write it here.<i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i>:</label><br>
-                <input type="text" id="location-room" placeholder="Sci 0.37" required><br><br>
-            </fieldset>
-            <fieldset>
-                <legend>Description</legend>
-                <label for="description">*Describe, in as much detail as you can, what the fault is:</label><br>
-                <textarea type="text" id="description" rows="4" cols="50" placeholder="A tree has fallen across the path, blocking access for pedestrians.​" required></textarea><br><br>
-            </fieldset>
-            <fieldset>
-                <legend>Images & Files</legend>
-                <label for="photo">If you can, attach an image or video of the fault which you think accurately portrays it:<br></label>
-                <input type="file" id="photo" name="myfile"><br><br>
-                <label for="photo">If you wish, attach any images, videos or files you think could be helpful to the technicians:<br></label>
-                <input type="file" id="other file" name="myfile"><br><br>
-            </fieldset>
-            <fieldset>
-                <legend>Urgency</legend>
-                <input list="urgencies" name="browser" placeholder = "3">
-                <datalist id="urgencies">
-                    <option value="1">
-                    <option value="2">
-                    <option value="3">
-                    <option value="4">
-                    <option value="5">
-                </datalist>
-            </fieldset>
-
-            <input type="submit" value="Submit">
-        </form>
-
+        </div>
+        <div  id="fault-cards" style="display:flex; flex-direction: column;">
+            <div onclick ="viewDetailsUpdate(id)" id="card1" class="card" style="display:flex; flex-direction: column">
+                <div class="card-status" style="display:flex; flex-direction: row">
+                    <p><b>Priority: </b>1</p>
+                    <p><b>FAULT STATUS: </b>Pending</p>
+                    <p><b>Time of job: </b>6:00, 07/12/2022</p>
+                </div>
+                <div style="display:flex; flex-direction: row">
+                    <img style="align-self: center" src="photos/fault.png" alt="Tap">
+                    <div class="card-contents" style="display:flex; flex-direction: column;">
+                        <div class="card-info" style="display:flex; flex-direction: column; margin-left:20px">
+                            <p><b>Urgency:</b> Medium (needs verification)</p>
+                            <p><b>Location:</b> Inside the Lawrence Stenhouse building on floor 0, in the men’s toilets just past the PC and cyber labs.</p>
+                            <div class = "room" style="display:flex; flex-direction: row; ">
+                                <p style="margin-right:20px"><b>Room:</b> LSB 0.03</p>
+                                <img style="align-self: center; cursor: help;" src="photos/questionmark.png">
+                                <p><i>What does this mean?</i></p>
+                            </div>
+                            <p><b>Description:</b> The tap is leaking in LSB 0.03! We have a bucket underneath but you guy should come soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div onclick ="viewDetailsUpdate(id)" id="card2" class="card" style="display:flex; flex-direction: column">
+                <div class="card-status" style="display:flex; flex-direction: row">
+                    <p><b>Priority: </b>1</p>
+                    <p><b>FAULT STATUS: </b>Pending</p>
+                    <p><b>Time of job: </b>6:00, 07/12/2022</p>
+                </div>
+                <div style="display:flex; flex-direction: row">
+                    <img style="align-self: center" src="photos/fault.png" alt="Tap">
+                    <div class="card-contents" style="display:flex; flex-direction: column;">
+                        <div class="card-info" style="display:flex; flex-direction: column; margin-left:20px">
+                            <p><b>Urgency:</b> Medium (needs verification)</p>
+                            <p><b>Location:</b> Inside the Lawrence Stenhouse building on floor 0, in the men’s toilets just past the PC and cyber labs.</p>
+                            <div class = "room" style="display:flex; flex-direction: row; ">
+                                <p style="margin-right:20px"><b>Room:</b> LSB 0.03</p>
+                                <img style="align-self: center; cursor: help;" src="photos/questionmark.png">
+                                <p><i>What does this mean?</i></p>
+                            </div>
+                            <p><b>Description:</b> The tap is leaking in LSB 0.03! We have a bucket underneath but you guy should come soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

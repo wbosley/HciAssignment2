@@ -211,14 +211,24 @@ input:focus {
     margin: 10px;
 }
 
+#top-row > div{
+    margin: 10px;
+}
+
 .dropdown{
+    border: 2px solid;
     position: relative;
     display: inline-block;
+    background-color: #262626;
+    color: #f9f9f9;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 .dropdown:hover .dropdown-elements{
     display: block;
 }
 .dropdown-elements{
+    color: #111111;
     display: none;
     z-index: 1;
     position: absolute;
@@ -233,5 +243,16 @@ input:focus {
 }
 .dropdown-elements > div:hover{
     background-color: darkgray;
+}
+
+
+.card{
+    border-radius: 25px;
+    border: 2px solid;
+    padding: 20px;
+    background-color: #c7c7c7;
+}
+.card > div{
+    margin: 5px;
 }
 

@@ -112,6 +112,20 @@ input {
     border-radius: 2px;
 }
 
+input:invalid {
+    border: 2px solid red;
+    box-shadow: 0px 4px 11px -3px white;
+    animation:flashingred 1s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flashingred{
+    from{box-shadow: 0px 4px 11px -3px white}
+    to{box-shadow: 0px 4px 11px -3px red}
+}
+
 textarea{
     -webkit-appearance: none;
     -moz-appearance:    none;

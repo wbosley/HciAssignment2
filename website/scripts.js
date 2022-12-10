@@ -20,6 +20,7 @@ function viewDetails(cardName){
 		document.getElementById("fault-cards").appendChild(fieldset);
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
+		document.getElementById("lowerDetailsDiv").style.display = "flex";
 	}else{
 
 	}

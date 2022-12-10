@@ -43,13 +43,22 @@ li a:hover {
     float:right;
 }
 
+#location-text{
+    resize:none;
+
+}
 
 aside {
     background-color: #999999;
+    float:left;
 }
 
 .asideNav {
     list-style-type: none;
+    width:15vw;
+    max-width:200px;
+    float:left;
+    border: 10px solid pink;
 }
 
 .asideNav li {
@@ -76,6 +85,24 @@ h1 {
     font-size: 45px;
 }
 
+form{
+}
+
+fieldset{
+    width:45vw;
+    margin:20px 0px;
+    border: 1px solid Gray;
+    padding:20px;
+}
+
+legend {
+    font-family:Arial;
+    font-size:25px;
+}
+
+label {
+    font-family:Arial;
+}
 
 input {
     -webkit-appearance: none;
@@ -85,9 +112,19 @@ input {
     border-radius: 2px;
 }
 
+textarea{
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 2px solid #5a5a5a;
+    border-radius: 2px;
+
+}
+
 input:focus {
     -webkit-appearance: none;
     -moz-appearance:    none;
     appearance:         none;
     border: 2px solid hotpink;
 }
+

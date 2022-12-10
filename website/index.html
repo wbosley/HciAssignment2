@@ -19,7 +19,7 @@
     <aside>
         <ul class = "asideNav" style = "border: 1px solid green">
             <li class = "asideListItem" style = "border: 1px solid green"><a class="active" href="#home">Report a fault</a></li>
-            <li class = "asideListItem"><a href="#news2">My tickets</a></li>
+            <li class = "asideListItem"><a href="#news2">My faults</a></li>
         </ul>
     </aside>
     <!-- THE DIV BELOW CONTAINS ALL CONTENT WHICH NEEDS TO BE CHANGED (e.g. content that is not UI) -->
@@ -40,8 +40,8 @@
                 <p>If you wish, click the map and select the place where the fault occurred.</p>
                 <img style = "width:30vw" src="photos/map.png"></img>
                 <br>
-                <label for="location-room">If the fault has occurred indoors and you know the room number, please write it here.<i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i>:</label><br>
-                <input type="text" id="location-room" placeholder="Sci 0.37" required><br><br>
+                <label for="location-room">If the fault has occurred indoors and you know the room number, please write it here: <i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i></label><br>
+                <input type="text" id="location-room" placeholder="Sci 0.37"><br><br>
             </fieldset>
             <fieldset>
                 <legend>Description</legend>
@@ -57,7 +57,10 @@
             </fieldset>
             <fieldset>
                 <legend>Urgency</legend>
-                <input list="urgencies" name="browser" placeholder = "3">
+                <label for = "urgencies">
+                    Please select a priority level for the fault: <i>(The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here</a>)</i><br>
+                </label>
+                <input list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required>
                 <datalist id="urgencies">
                     <option value="1">
                     <option value="2">

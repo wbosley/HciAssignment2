@@ -12,11 +12,11 @@
 }
 
 
-li {
+.navli {
     float: left;
 }
 
-li a {
+.navli a {
     display: block;
     color: white;
     text-align: center;
@@ -27,7 +27,7 @@ li a {
 
 }
 
-li a:hover {
+.navli a:hover {
     background-color: #111;
 }
 

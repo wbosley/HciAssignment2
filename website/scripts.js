@@ -20,6 +20,7 @@ function viewDetails(cardName){
 		document.getElementById("fault-cards").appendChild(fieldset);
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
+		card.style.cursor = "default";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
 	}else{
 
@@ -47,6 +48,7 @@ function viewDetailsUpdate(cardName){
 		document.getElementById("fault-cards").appendChild(fieldset);
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
+		card.style.cursor = "default";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
 	}else{
 

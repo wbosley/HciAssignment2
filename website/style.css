@@ -223,6 +223,7 @@ input:focus {
     color: #f9f9f9;
     padding-right: 10px;
     padding-left: 10px;
+    font-family: Arial;
 }
 .dropdown:hover .dropdown-elements{
     display: block;
@@ -248,7 +249,7 @@ input:focus {
 
 .card{
     border-radius: 25px;
-    border: 2px solid;
+    border: 1px solid;
     padding: 20px;
     background-color: #c7c7c7;
     cursor:pointer;
@@ -283,14 +284,32 @@ input:focus {
 .breadcrumb{
     padding: 10px 16px;
     list-style: none;
+    font-weight: bold;
+    font-family:Arial;
 }
 .breadcrumb > li{
     display: inline;
     font-size: 18px;
 }
+
+.breadcrumb li a{
+    color: #111111;
+    text-decoration: none;
+}
+
 .breadcrumb > a:hover{
     color: #01447e;
     text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+    text-decoration: underline;
+}
+
+.breadcrumb li+li:before{
+    padding: 8px;
+    color: black;
+    content: ">";
 }
 
 h2 {
@@ -300,4 +319,8 @@ h2 {
 .successMessage{
     margin-top:0;
     margin-bottom:50px;
+}
+
+#fault-cards{
+    gap: 10px;
 }

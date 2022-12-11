@@ -6,28 +6,31 @@
     <link href="style.css" rel="stylesheet">
     <script src="scripts.js"></script>
 </head>
-<body>
+<body onload="highlightAside(0)">
 <nav>
     <ul class = "mainNav">
         <li class = "navli"><a class="active" href="index.html">Reporting faults</a></li>
         <li class = "navli"><a href="administrate.html">Administrate faults</a></li>
-        <li class = "navli"><a href="update.html">Update fault status</a></li>
+        <li class = "navli"><a href="update.html" style="background-color: #262626;">Update fault status</a></li>
         <li class = "logoListItem navli"><a class="active logoLink" href="#index"><img class = "logo" src = "photos/uealogowhite.png"></a></li>
     </ul>
 </nav>
 <div style = "display: flex; border: 1px solid blue;">
     <!-- todo remove the border from the div below before the final upload-->
     <aside>
-        <ul class = "asideNav" style = "border: 1px solid green">
-            <li class = "asideListItem navli" style = "border: 1px solid green"><a class="active" href="#home">Incomplete</a></li>
-            <li class = "asideListItem navli"><a href="#news2">Complete</a></li>
-            <li class = "asideListItem navli"><a href="#news2">Timetable</a></li>
+        <ul id ="sideNav" class = "asideNav" style = "border: 1px solid green">
+            <li onclick="highlightAside(0)" class = "asideListItem navli" style = "border: 1px solid green"><a class="active" href="#home">Incomplete</a></li>
+            <li onclick="highlightAside(1)" class = "asideListItem navli"><a href="#news2">Complete</a></li>
+            <li onclick="highlightAside(2)" class = "asideListItem navli"><a href="#news2">Timetable</a></li>
         </ul>
     </aside>
     <!-- THE DIV BELOW CONTAINS ALL CONTENT WHICH NEEDS TO BE CHANGED (e.g. content that is not UI) -->
     <div id ="admin-top" style = "border:1px solid red; max-width: 80vw; padding: 0px 40px; display:flex; flex-direction: column;">
         <div id="top-row" style="display:flex; flex-direction: row;">
-            <div><p id="breadcrumbs"><b>Update fault status > <u>Incomplete</u></b></p></div>
+            <ul class="breadcrumb" id="bread">
+                <li><a href="#">Update fault status</a></li>
+                <li>Incomplete</li>
+            </ul>
             <div class="dropdown">
                 <p>SORT BY: Urgency</p>
                 <div class="dropdown-elements">
@@ -45,6 +48,7 @@
             </div>
 
         </div>
+
         <div  id="fault-cards" style="display:flex; flex-direction: column;">
             <div onclick ="viewDetailsUpdate(id)" id="card1" class="card" style="display:flex; flex-direction: column">
                 <div class="card-status" style="display:flex; flex-direction: row">

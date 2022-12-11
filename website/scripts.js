@@ -76,7 +76,37 @@ function viewDetailsUpdate(cardName){
 		legend.innerText = "Details";
 		fieldset.appendChild(legend);
 		fieldset.appendChild(card);
-		document.getElementById("fault-cards").appendChild(fieldset);
+		document.getElementById("fault-cards-incomplete").appendChild(fieldset);
+		card.style.border = "0px";
+		card.style.backgroundColor = "white";
+		card.style.cursor = "default";
+		document.getElementById("lowerDetailsDiv").style.display = "flex";
+		updateBreadcrumb(["Update fault status", "Incomplete", "Fault ???"], ["update.html", "update.html"]);
+	}else{
+
+	}
+}
+
+function viewDetailsUpdate2(cardName){
+	var card = document.getElementById(cardName);
+	var cards = document.getElementsByClassName("card");
+	var hiddenCards = false;
+
+	for(let i=0; i< cards.length; i++){
+		if(cards[i].id !== cardName && cards[i].style.display !== "none"){
+			cards[i].style.display = "none";
+			hiddenCards = true;
+		}
+	}
+	if(hiddenCards === true){
+		var breadcrumbs = document.getElementById("breadcrumbs");
+		var fieldset = document.createElement('fieldset');
+		var legend = document.createElement('legend');
+		//breadcrumbs.innerText = "Administrate faults > Needs assigning > Fault details";
+		legend.innerText = "Details";
+		fieldset.appendChild(legend);
+		fieldset.appendChild(card);
+		document.getElementById("fault-cards-complete").appendChild(fieldset);
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
@@ -115,7 +145,7 @@ function highlightAside(index){
 }
 
 function adminFaultsBar(index){
-	highlightAside(index)
+	highlightAside(index);
 	if(index === 0){
 		updateBreadcrumb(["Administrate faults", "Needs assigning"], ["administrate.html", "administrate.html"]);
 		document.getElementById("fault-cards-assigning").style.display = "flex";
@@ -152,4 +182,57 @@ function adminFaultsBar(index){
 		}
 	}
 
+}
+
+function updateBar(index){
+	highlightAside(index);
+	if(index === 0){
+		updateBreadcrumb(["Update fault status", "Incomplete"], ["update.html", "update.html"]);
+		document.getElementById("fault-cards-incomplete").style.display = "flex";
+		document.getElementById("fault-cards-complete").style.display = "none";
+		document.getElementById("lowerDetailsDiv").style.display = "none";
+		var wad = document.getElementsByClassName("card");
+		var dropdowns = document.getElementsByClassName("dropdown");
+		for(let i =0; i < dropdowns.length; i++){
+			dropdowns[i].style.display = "inline-block";
+		}
+		for(let i =0; i< wad.length; i++){
+			wad[i].style.display = "flex";
+			console.log("test");
+			if(wad[i].parentElement.tagName === 'FIELDSET'){
+				wad[i].parentElement.replaceWith(wad[i]);
+				wad[i].style.backgroundColor = "#c7c7c7";
+				wad[i].style.border = "1px solid";
+				wad[i].style.cursor = "pointer";
+			}
+		}
+	}else if(index === 1){
+		updateBreadcrumb(["Update fault status", "Complete"], ["aupdate.html", "update.html"]);
+		document.getElementById("fault-cards-incomplete").style.display = "none";
+		document.getElementById("fault-cards-complete").style.display = "flex";
+		document.getElementById("lowerDetailsDiv").style.display = "none";
+		var wad = document.getElementsByClassName("card");
+		var dropdowns = document.getElementsByClassName("dropdown");
+		for(let i =0; i < dropdowns.length; i++){
+			dropdowns[i].style.display = "inline-block";
+		}
+		for(let i =0; i< wad.length; i++){
+			wad[i].style.display = "flex";
+			console.log("test");
+			if(wad[i].parentElement.tagName === 'FIELDSET'){
+				wad[i].parentElement.replaceWith(wad[i]);
+				wad[i].style.backgroundColor = "#c7c7c7";
+				wad[i].style.border = "1px solid";
+				wad[i].style.cursor = "pointer";
+			}
+		}
+	}else{
+		updateBreadcrumb(["Update fault status", "Timetable"], ["aupdate.html", "update.html"]);
+		document.getElementById("fault-cards-incomplete").style.display = "none";
+		document.getElementById("fault-cards-complete").style.display = "none";
+		var dropdowns = document.getElementsByClassName("dropdown");
+		for(let i =0; i < dropdowns.length; i++){
+			dropdowns[i].style.display = "none";
+		}
+	}
 }

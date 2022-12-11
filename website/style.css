@@ -322,8 +322,9 @@ h2 {
 }
 
 
-#fault-cards{
+.fault-cards {
     gap: 10px;
+}
 
 input[type=file] {
     width: 40vw;

@@ -293,3 +293,11 @@ input:focus {
     text-decoration: underline;
 }
 
+h2 {
+    font-family:'Poppins', sans-serif;
+}
+
+.successMessage{
+    margin-top:0;
+    margin-bottom:50px;
+}

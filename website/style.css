@@ -301,3 +301,26 @@ h2 {
     margin-top:0;
     margin-bottom:50px;
 }
+
+input[type=file] {
+    width: 40vw;
+    max-width: 100%;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: 1px solid gray;
+    background: #e5e5e5;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    color: #000000;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+    background: #000000;
+    color: white;
+}

@@ -22,7 +22,7 @@ function viewDetails(cardName){
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
-		updateBreadcrumb(["Administrate faults", "Needs assigning", "Fault details"], ["administrate.html", "administrate.html"]);
+		updateBreadcrumb(["Administrate faults", "Needs assigning", "Fault details"], ["administrate.html", "adminFaultsBar(0)"]);
 	}else{
 
 	}
@@ -52,7 +52,7 @@ function viewDetails2(cardName){
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
-		updateBreadcrumb(["Administrate faults", "Assigned", "Fault details"], ["administrate.html", "administrate.html"]);
+		updateBreadcrumb(["Administrate faults", "Assigned", "Fault details"], ["administrate.html", "adminFaultsBar(1)"]);
 	}else{
 
 	}
@@ -81,7 +81,7 @@ function viewDetailsUpdate(cardName){
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
-		updateBreadcrumb(["Update fault status", "Incomplete", "Fault ???"], ["update.html", "update.html"]);
+		updateBreadcrumb(["Update fault status", "Incomplete", "Fault ???"], ["update.html", "updateBar(0)"]);
 	}else{
 
 	}
@@ -111,7 +111,7 @@ function viewDetailsUpdate2(cardName){
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
-		updateBreadcrumb(["Update fault status", "Incomplete", "Fault ???"], ["update.html", "update.html"]);
+		updateBreadcrumb(["Update fault status", "Complete", "Fault ???"], ["update.html", "updateBar(1)"]);
 	}else{
 
 	}
@@ -127,7 +127,12 @@ function updateBreadcrumb(text, links){
 		if(i === textLength-1){
 			breadcrumb.innerHTML += "<li>" +  text[i] + "</li>";
 		}else{
-			breadcrumb.innerHTML += "<li>" + "<a href=\"" + links[i] +"\">" + text[i] + "</a>" + "</li>";
+			if(links[i].includes(".html")){
+				breadcrumb.innerHTML += "<li>" + "<a href=\"" + links[i] +"\">" + text[i] + "</a>" + "</li>";
+			}else{
+				breadcrumb.innerHTML += "<li style=\"cursor:pointer;\" onclick=\"" + links[i] + "\">" +  text[i] + "</li>";
+			}
+
 		}
 	}
 }
@@ -207,7 +212,7 @@ function updateBar(index){
 			}
 		}
 	}else if(index === 1){
-		updateBreadcrumb(["Update fault status", "Complete"], ["aupdate.html", "update.html"]);
+		updateBreadcrumb(["Update fault status", "Complete"], ["update.html", "update.html"]);
 		document.getElementById("fault-cards-incomplete").style.display = "none";
 		document.getElementById("fault-cards-complete").style.display = "flex";
 		document.getElementById("lowerDetailsDiv").style.display = "none";
@@ -227,7 +232,7 @@ function updateBar(index){
 			}
 		}
 	}else{
-		updateBreadcrumb(["Update fault status", "Timetable"], ["aupdate.html", "update.html"]);
+		updateBreadcrumb(["Update fault status", "Timetable"], ["update.html", "update.html"]);
 		document.getElementById("fault-cards-incomplete").style.display = "none";
 		document.getElementById("fault-cards-complete").style.display = "none";
 		var dropdowns = document.getElementsByClassName("dropdown");

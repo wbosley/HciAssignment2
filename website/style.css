@@ -181,17 +181,28 @@ textarea{
     transition: 0.2s ease;
 }
 
-input:focus {
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    appearance:         none;
-    border: 2px solid hotpink;
+textarea:hover{
+    outline: none;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    transition: none;
 }
 
+textarea:hover:focus{
+    transition: 0.3s ease;
+}
 
-
-
-
+textarea:focus {
+    outline: none;
+    padding: 7.5px 5px;
+    margin:2.5px 0px;
+    transition: 0.3s ease;
+    border-color: black;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
 
 /* CODE FOR GENERATING EMERGENCY WINDOW*/
 .emergency {

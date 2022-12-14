@@ -58,7 +58,12 @@
 }
 
 aside {
-    background-color: #999999;
+    /*Background color iterations:*/
+    /*background-color: #e8047c;*/
+    /*background-color: #727272;*/
+    /*background-color: #999999;*/
+    /*background-color: #436a3c;*/
+    background-color: #7c577f;
     float:left;
 }
 

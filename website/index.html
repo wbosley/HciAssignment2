@@ -59,6 +59,14 @@
                 <legend>Location</legend>
                 <label for="location-text">*Describe, in as much detail as you can, the location of the fault:</label><br>
                 <textarea type="text" id="location-text" rows="4" cols="50" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
+                <p>If you wish, click the map and select the place where the fault occurred.</p>
+                <img style = "width:30vw" src="photos/map.png"></img>
+                <br>
+                <!--todo make the below div appear when the user clicks the map image-->
+                <div style = "display:flex; flex-direction: row; align-items: center;">
+                    <p><i>Map location selected successfully.</i></p>
+                    <img src = "photos/greencheck.png" height="30px">
+                </div>
 
                 <!-- todo edit this css-->
                 <div class="emergency" onclick="removeEmergencyPopup()">
@@ -70,15 +78,6 @@
                         <h2 id = "emergencyHeader">Please telphone campus security on <b id = "emergencyNumber">01603 59 2121.</b></h2>
                         <p>If not, please click anywhere on this box to continue.</p>
                     </span>
-                </div>
-
-                <p>If you wish, click the map and select the place where the fault occurred.</p>
-                <img style = "width:30vw" src="photos/map.png"></img>
-                <br>
-                <!--todo make the below div appear when the user clicks the map image-->
-                <div style = "display:flex; flex-direction: row; align-items: center;">
-                    <p><i>Map location selected successfully.</i></p>
-                    <img src = "photos/greencheck.png" height="30px">
                 </div>
 
                 <label for="location-room">If the fault has occurred indoors and you know the room number, please write it here: <i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i></label><br>

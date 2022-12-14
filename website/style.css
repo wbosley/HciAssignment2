@@ -249,10 +249,10 @@ textarea:focus {
 }
 
 #emergencyNumber{
-    animation:flashingEmergency 1s;
+    /*animation:flashingEmergency 1s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate;*/
 }
 
 @keyframes flashingEmergency{

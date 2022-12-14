@@ -6,32 +6,36 @@
     <link href="style.css" rel="stylesheet">
     <script src="scripts.js"></script>
 </head>
-<body onload="highlightAside(0)">
-<nav>
-    <ul class = "mainNav">
-        <li class = "navli"><a class="active" href="index.html" style="background-color: #262626;">Reporting faults</a></li>
-        <li class = "navli"><a href="administrate.html">Administrate faults</a></li>
-        <li class = "navli"><a href="update.html">Update fault status</a></li>
-        <li class = "navli logoListItem "><a class="active logoLink" href="#index"><img class = "logo" src = "photos/uealogowhite.png"></a></li>
-    </ul>
-</nav>
+<body>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="hamburgernav">
+    <div style="display:flex; flex-direction: row; align-items: center; justify-content: left;">
+        <a href="javascript:void(0);" class="hamburger" onclick="hamburgerMenu()">
+            <img src="photos/hamburger.png">
+        </a>
+        <p id="hamburger-text"><b>Menu</b></p>
+    </div>
+
+    <div id="hamburgernav-pages">
+        <a href="#news">Report a fault</a>
+        <a href="#contact">Report</a>
+        <a href="#about">My faults</a>
+    </div>
+</div>
 <div style = "display: flex; border: 1px solid blue;">
     <!-- todo remove the border from the div below before the final upload-->
-    <aside>
-        <ul id ="sideNav" class = "asideNav" style = "border: 1px solid green">
-            <li class = "asideListItem navli" style = "border: 1px solid green"><a class="active" href="#home">Report a fault</a></li>
-            <li class = "asideListItem navli"><a href="#news2">My faults</a></li>
-        </ul>
-    </aside>
     <!-- THE DIV BELOW CONTAINS ALL CONTENT WHICH NEEDS TO BE CHANGED (e.g. content that is not UI) -->
-    <div style = "border:1px solid red; max-width: 80vw; padding: 0px 40px;">
+    <div style = "border:1px solid red; padding: 0px 40px;">
 
         <script>
             var YES = true;
             var NO = false;
             if (YES)
             {
-                alert(<h1>This code block will be executed</h1>)
+                alert(<h1>This code block will be executed</h1>);
             }
         </script>
 
@@ -62,7 +66,7 @@
                 <textarea type="text" id="location-text" rows="4" cols="50" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
 
                 <!-- todo edit this css-->
-                <div class="emergency" onclick="removeEmergencyPopup()">
+                <div class="emergency" onclick="removeEmergencyPopup()" style="display:none;">
                     <span class="emergencytext" id="emergencyMessage">
                         <h1> ARE YOU IN AN EMERGENCY?</h1>
                         <div style = "display:flex; flex-direction:row; justify-content: center;">

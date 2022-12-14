@@ -86,10 +86,12 @@ h1 {
 }
 
 form{
+    display:flex;
+    flex-direction: column;
 }
 
 fieldset{
-    width:45vw;
+    width:80vw;
     margin:20px 0px;
     border: 1px solid Gray;
     padding:20px;
@@ -98,10 +100,12 @@ fieldset{
 legend {
     font-family:Arial;
     font-size:25px;
+    font-weight: bold;
 }
 
 label {
     font-family:Arial;
+    font-size: 25px;
 }
 
 input {
@@ -348,4 +352,31 @@ input[type=file]::file-selector-button:hover {
     background: #000000;
     color: white;
 
+}
+
+.hamburgernav{
+    background-color: #888888;
+    min-height: 7vw;
+    display:flex;
+    flex-direction:column;
+    font-family: Arial;
+    font-size: 25px;
+    color: white;
+}
+.hamburger{
+    padding-left: 20px;
+
+}
+#hamburger-text{
+
+    padding-left: 50px;
+}
+#hamburgernav-pages a{
+    display:block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+#hamburgernav-pages{
+    display:none;
 }

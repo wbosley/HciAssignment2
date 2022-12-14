@@ -90,3 +90,41 @@
     transition: 0.2s ease;
     border-color: black;
 }*/
+
+/*STYLING THE CARDS*/
+/*!*option 1:*!
+.card:hover{
+    !*border-color:#7c577f;*!
+    !*-webkit-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);*!
+
+    -webkit-box-shadow: 0px 5px 23px 0px #7c577f;
+    -moz-box-shadow: 0px 5px 23px 0px #7c577f;
+    box-shadow: 0px 5px 23px 0px #7c577f;
+
+    transition: 0.2s ease;
+}
+
+
+!*option 2:*!
+.card:hover{
+    border-color:#7c577f;
+    -webkit-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+
+
+    transition: 0.2s ease;
+}
+
+!*option 3:*!
+.card:hover{
+    -webkit-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.75);
+    padding: 30px 20px;
+    margin: 0px 0px;
+
+    transition: 0.2s ease;
+}*/

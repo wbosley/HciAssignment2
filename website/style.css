@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Work+Sans:wght@700&display=swap');
+/*font-family:'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/*font-family: 'Varela Round', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+/*font-family: 'Archivo Black', sans-serif;*/
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
 
 .mainNav {
     list-style-type: none;

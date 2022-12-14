@@ -53,17 +53,17 @@
         </script>
         <!-- todo DELETE THIS-->
 
-        <form>
+        <form onsubmit="return formSubmitSuccess()">
             <!-- TODO Add accessibility options to stop form submitting without information.-->
             <fieldset>
                 <legend>Location</legend>
                 <label for="location-text">*Describe, in as much detail as you can, the location of the fault:</label><br>
                 <textarea type="text" id="location-text" rows="4" cols="50" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
                 <p>If you wish, click the map and select the place where the fault occurred.</p>
-                <img style = "width:30vw" src="photos/map.png"></img>
+                <img onclick="mapSelectSuccess()" style = "width:30vw" src="photos/map.png"></img>
                 <br>
                 <!--todo make the below div appear when the user clicks the map image-->
-                <div style = "display:flex; flex-direction: row; align-items: center;">
+                <div id="map-select-success" style = "display:none; flex-direction: row; align-items: center;">
                     <p><i>Map location selected successfully.</i></p>
                     <img src = "photos/greencheck.png" height="30px">
                 </div>
@@ -117,10 +117,10 @@
                 </datalist>
             </fieldset>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" >
 
             <!--todo make the below div appear when the user presses submit with all required inputs filled in-->
-            <div>
+            <div id="form-submit-success" style="display: none;">
                 <div style = "display:flex; flex-direction: row; align-items: center;">
                     <h2>Form submitted!</h2><img height = "40px" src = "photos/greencheck.png">
 

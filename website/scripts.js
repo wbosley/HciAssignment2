@@ -241,3 +241,11 @@ function updateBar(index){
 		}
 	}
 }
+
+function mapSelectSuccess(){
+	document.getElementById("map-select-success").style.display = "flex";
+}
+
+function formSubmitSuccess(){
+	document.getElementById("form-submit-success").style.display = "flex";
+}

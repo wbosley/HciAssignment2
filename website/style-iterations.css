@@ -1,0 +1,92 @@
+/*Design 1*/
+/*input {*/
+/*    -webkit-appearance: none;*/
+/*    -moz-appearance:    none;*/
+/*    appearance:         none;*/
+/*    border: 2px solid #6d6d6d;*/
+/*    border-radius: 2px;*/
+/*    margin:5px 0px;*/
+/*}*/
+
+/*Design 2*/
+/*input {*/
+/*    -webkit-appearance: none;*/
+/*    -moz-appearance:    none;*/
+/*    appearance:         none;*/
+/*    border: 2px solid #000000;*/
+/*    border-radius: 3px;*/
+/*    margin:5px 0px;*/
+/*}*/
+
+/*Design 3*/
+/*input {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 1px solid #6d6d6d;;
+    border-radius: 3px;
+    padding:5px;
+    margin:5px 0px;
+}*/
+
+/*Iteration 2*/
+/*Design 4*/
+/*input {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 2px solid black;;
+    border-radius: 4px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 15px;
+}*/
+
+/*Design 5*/
+/*input {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 14px;
+
+}*/
+
+
+/*Input focus iterations:*/
+/*Design 1*/
+/*input:focus {
+    border: 2px solid #ff52aa !important;
+    outline: none;
+}*/
+
+/*Design 2*/
+/*input:focus {
+    border: 2px solid #0070e2 !important;
+    outline: none;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}*/
+
+/*Design 3*/
+/*input:focus {
+
+    outline: none;
+    padding: 10px 5px;
+    margin:0px;
+    transition: 0.2s ease;
+}*/
+
+/*ITERATIOn 2*/
+/*Design 4*/
+/*input:focus {
+    outline: none;
+    padding: 7.5px 5px;
+    margin:2.5px 0px;
+    transition: 0.2s ease;
+    border-color: black;
+}*/

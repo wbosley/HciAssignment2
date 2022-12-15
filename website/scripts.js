@@ -1,3 +1,33 @@
+function viewDetailsReport(cardName){
+	var card = document.getElementById(cardName);
+	var cards = document.getElementsByClassName("card");
+	var hiddenCards = false;
+	for(let i=0; i< cards.length; i++){
+		if(cards[i].id !== cardName && cards[i].style.display !== "none"){
+			cards[i].style.display = "none";
+			hiddenCards = true;
+		}
+	}
+	if(hiddenCards === true){
+		var breadcrumbs = document.getElementById("breadcrumbs");
+		var fieldset = document.createElement('fieldset');
+		var legend = document.createElement('legend');
+
+		//breadcrumbs.innerText = "Administrate faults > Needs assigning > Fault details";
+		legend.innerText = "Location";
+		fieldset.appendChild(legend);
+		fieldset.appendChild(card);
+		document.getElementById("fault-cards-user").appendChild(fieldset);
+		card.style.border = "0px";
+		card.style.backgroundColor = "white";
+		card.style.cursor = "default";
+		card.style.pointerEvents = "none";
+		//document.getElementById("lowerDetailsDiv").style.display = "flex";
+		updateBreadcrumb(["Reporting faults", "My faults", "Fault details"], ["index.html", "reportBar(1)"]);
+	}else{
+
+	}
+}
 function viewDetails(cardName){
 	var card = document.getElementById(cardName);
 	var cards = document.getElementsByClassName("card");
@@ -153,6 +183,31 @@ function highlightAside(index){
 	}
 }
 
+function reportBar(index){
+	highlightAside(index);
+	if(index === 0){
+		document.getElementById("report-fault").style.display = "block";
+		document.getElementById("my-faults").style.display = "none";
+		updateBreadcrumb(["Reporting faults", "Report a fault"], ["index.html"]);
+	}else{
+		document.getElementById("report-fault").style.display = "none";
+		document.getElementById("my-faults").style.display = "flex";
+		updateBreadcrumb(["Reporting faults", "My faults"], ["index.html"]);
+		var wad = document.getElementsByClassName("card");
+		for(let i =0; i< wad.length; i++){
+			wad[i].style.display = "flex";
+			console.log("test");
+			if(wad[i].parentElement.tagName === 'FIELDSET'){
+				wad[i].parentElement.replaceWith(wad[i]);
+				wad[i].style.backgroundColor = "#e8e8e8";
+				wad[i].style.border = "1px solid";
+				wad[i].style.cursor = "pointer";
+				wad[i].style.pointerEvents = "auto";
+			}
+		}
+	}
+}
+
 function adminFaultsBar(index){
 	highlightAside(index);
 	if(index === 0){
@@ -203,6 +258,7 @@ function updateBar(index){
 		document.getElementById("fault-cards-incomplete").style.display = "flex";
 		document.getElementById("fault-cards-complete").style.display = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "none";
+		document.getElementById("timetable-section").style.display = "none";
 		var wad = document.getElementsByClassName("card");
 		var dropdowns = document.getElementsByClassName("dropdown");
 		for(let i =0; i < dropdowns.length; i++){
@@ -224,6 +280,7 @@ function updateBar(index){
 		document.getElementById("fault-cards-incomplete").style.display = "none";
 		document.getElementById("fault-cards-complete").style.display = "flex";
 		document.getElementById("lowerDetailsDiv").style.display = "none";
+		document.getElementById("timetable-section").style.display = "none";
 		var wad = document.getElementsByClassName("card");
 		var dropdowns = document.getElementsByClassName("dropdown");
 		for(let i =0; i < dropdowns.length; i++){
@@ -244,6 +301,8 @@ function updateBar(index){
 		updateBreadcrumb(["Update fault status", "Timetable"], ["update.html", "update.html"]);
 		document.getElementById("fault-cards-incomplete").style.display = "none";
 		document.getElementById("fault-cards-complete").style.display = "none";
+		document.getElementById("lowerDetailsDiv").style.display = "none";
+		document.getElementById("timetable-section").style.display = "flex";
 		var dropdowns = document.getElementsByClassName("dropdown");
 		for(let i =0; i < dropdowns.length; i++){
 			dropdowns[i].style.display = "none";

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Uea Estates Faults Services</title>
     <link href="style.css" rel="stylesheet">
-    <script src="../../../../AppData/Local/Temp/Rar$DRa19640.19825/Lab9js/HCIJSExample1.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
 </head>
 <body onload="highlightAside(0)">
@@ -132,13 +132,13 @@
 
         <div id = "lowerDetailsDiv" style = "display:none; flex-direction: column">
             <div class = "map">
-                <p style = "margin:10px;"><i>Click to collapse map:</i></p> <br>
-                <img style = "width:45vw" src="photos/map.png"></img>
+                <p style = "margin:10px; cursor: pointer; user-select: none;" onclick="updateMap()" id="map-text"><i><b><u>Click to collapse map</u> ⏶</b></i></p> <br>
+                <img id="map" style = "width:45vw" src="photos/map.png">
             </div>
             <div class = "form">
                 <fieldset>
                     <legend>To do:</legend>
-                    <form class = "detailsForm">
+                    <form class = "detailsForm" onsubmit="return adminSubmitSuccess()" id="admin-form">
                         <label for = "urgencies">
                             *Please select a priority level for the fault: <img style="align-self: center; cursor: help;" src="photos/questionmark.png"> <i style="cursor: help;">(The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here</a>)</i><br>
                         </label>
@@ -181,7 +181,7 @@
 
                     </form>
                     <!--todo make the below div appear when the user presses submit with all required inputs filled in-->
-                    <div>
+                    <div id="admin-submit-success" style="display: none;">
                         <div style = "display:flex; flex-direction: row; align-items: center;">
                             <h2>Form submitted!</h2><img height = "40px" src = "photos/greencheck.png">
 

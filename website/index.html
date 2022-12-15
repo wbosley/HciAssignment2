@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Uea Estates Faults Services</title>
     <link href="style.css" rel="stylesheet">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
 </head>
 <body onload="highlightAside(0)">
@@ -33,17 +34,10 @@
                 alert(<h1>This code block will be executed</h1>)
             }
         </script>
-
-
         <h1> Reporting a fault</h1>
-
         <p>This form is for reporting faults to the UEA estates team so we can get them fixed. Please try to give as much useful detail as you can to help us locate and fix the problem.
         <p><i>An asterisk ( * ) indicates an answer is required before this form can be submitted.</i></p>
         </p>
-
-
-
-
         <script>
             // When the user clicks on div, open the popup
             function removeEmergencyPopup() {
@@ -53,7 +47,19 @@
         </script>
         <!-- todo DELETE THIS-->
 
-        <form onsubmit="return formSubmitSuccess()">
+        <!-- todo edit this css-->
+        <div class="emergency" onclick="removeEmergencyPopup()">
+                    <span class="emergencytext" id="emergencyMessage">
+                        <h1> ARE YOU IN AN EMERGENCY?</h1>
+                        <div style = "display:flex; flex-direction:row; justify-content: center;">
+                        <img src = "photos/warningiconsblack.png" width = "70%" margin = "20px 0px">
+                        </div>
+                        <h2 id = "emergencyHeader">Please telphone campus security on <b id = "emergencyNumber">01603 59 2121.</b></h2>
+                        <p>If not, please click anywhere on this box to continue.</p>
+                    </span>
+        </div>
+
+        <form onsubmit="return formSubmitSuccess()" id="report-form">
             <!-- TODO Add accessibility options to stop form submitting without information.-->
             <fieldset>
                 <legend>Location</legend>
@@ -68,17 +74,7 @@
                     <img src = "photos/greencheck.png" height="30px">
                 </div>
 
-                <!-- todo edit this css-->
-                <div class="emergency" onclick="removeEmergencyPopup()">
-                    <span class="emergencytext" id="emergencyMessage">
-                        <h1> ARE YOU IN AN EMERGENCY?</h1>
-                        <div style = "display:flex; flex-direction:row; justify-content: center;">
-                        <img src = "photos/warningiconsblack.png" width = "70%" margin = "20px 0px">
-                        </div>
-                        <h2 id = "emergencyHeader">Please telphone campus security on <b id = "emergencyNumber">01603 59 2121.</b></h2>
-                        <p>If not, please click anywhere on this box to continue.</p>
-                    </span>
-                </div>
+
 
                 <label for="location-room">If the fault has occurred indoors and you know the room number, please write it here: <i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i></label><br>
                 <input type="text" id="location-room" placeholder="Sci 0.37"><br><br>
@@ -123,10 +119,8 @@
             <div id="form-submit-success" style="display: none;">
                 <div style = "display:flex; flex-direction: row; align-items: center;">
                     <h2>Form submitted!</h2><img height = "40px" src = "photos/greencheck.png">
-
                 </div>
                 <p class = "successMessage">The form was submitted successfully. You should receive an confirmation email shortly confirming the report. You can see the faults you have reported in the my faults tab on the left.</p>
-
             </div>
 
 

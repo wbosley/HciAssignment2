@@ -21,6 +21,7 @@ function viewDetails(cardName){
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
+		card.style.pointerEvents = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
 		updateBreadcrumb(["Administrate faults", "Needs assigning", "Fault details"], ["administrate.html", "adminFaultsBar(0)"]);
 	}else{
@@ -51,6 +52,7 @@ function viewDetails2(cardName){
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
+		card.style.pointerEvents = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
 		updateBreadcrumb(["Administrate faults", "Assigned", "Fault details"], ["administrate.html", "adminFaultsBar(1)"]);
 	}else{
@@ -80,6 +82,7 @@ function viewDetailsUpdate(cardName){
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
+		card.style.pointerEvents = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
 		updateBreadcrumb(["Update fault status", "Incomplete", "Fault ???"], ["update.html", "updateBar(0)"]);
 	}else{
@@ -110,6 +113,7 @@ function viewDetailsUpdate2(cardName){
 		card.style.border = "0px";
 		card.style.backgroundColor = "white";
 		card.style.cursor = "default";
+		card.style.pointerEvents = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
 		updateBreadcrumb(["Update fault status", "Complete", "Fault ???"], ["update.html", "updateBar(1)"]);
 	}else{
@@ -163,9 +167,11 @@ function adminFaultsBar(index){
 			console.log("test");
 			if(wad[i].parentElement.tagName === 'FIELDSET'){
 				wad[i].parentElement.replaceWith(wad[i]);
-				wad[i].style.backgroundColor = "#c7c7c7";
+				wad[i].style.backgroundColor = "#e8e8e8";
 				wad[i].style.border = "1px solid";
 				wad[i].style.cursor = "pointer";
+				wad[i].style.pointerEvents = "auto";
+				//wad[i].style.boxShadow = "0px 5px 23px 0px #7c577f";
 			}
 		}
 	}else{
@@ -180,9 +186,10 @@ function adminFaultsBar(index){
 			console.log("test");
 			if(wad[i].parentElement.tagName === 'FIELDSET'){
 				wad[i].parentElement.replaceWith(wad[i]);
-				wad[i].style.backgroundColor = "#c7c7c7";
+				wad[i].style.backgroundColor = "#e8e8e8";
 				wad[i].style.border = "1px solid";
 				wad[i].style.cursor = "pointer";
+				wad[i].style.pointerEvents = "auto";
 			}
 		}
 	}
@@ -206,9 +213,10 @@ function updateBar(index){
 			console.log("test");
 			if(wad[i].parentElement.tagName === 'FIELDSET'){
 				wad[i].parentElement.replaceWith(wad[i]);
-				wad[i].style.backgroundColor = "#c7c7c7";
+				wad[i].style.backgroundColor = "#e8e8e8";
 				wad[i].style.border = "1px solid";
 				wad[i].style.cursor = "pointer";
+				wad[i].style.pointerEvents = "auto";
 			}
 		}
 	}else if(index === 1){
@@ -226,9 +234,10 @@ function updateBar(index){
 			console.log("test");
 			if(wad[i].parentElement.tagName === 'FIELDSET'){
 				wad[i].parentElement.replaceWith(wad[i]);
-				wad[i].style.backgroundColor = "#c7c7c7";
+				wad[i].style.backgroundColor = "#e8e8e8";
 				wad[i].style.border = "1px solid";
 				wad[i].style.cursor = "pointer";
+				wad[i].style.pointerEvents = "auto";
 			}
 		}
 	}else{
@@ -247,5 +256,31 @@ function mapSelectSuccess(){
 }
 
 function formSubmitSuccess(){
+	event.preventDefault();
+	document.getElementById("report-form").reset();
 	document.getElementById("form-submit-success").style.display = "flex";
+}
+
+function adminSubmitSuccess(){
+	event.preventDefault();
+	document.getElementById("admin-form").reset();
+	document.getElementById("admin-submit-success").style.display = "flex";
+}
+
+function updateSubmitSuccess(){
+	event.preventDefault();
+	document.getElementById("update-form").reset();
+	document.getElementById("update-submit-success").style.display = "flex";
+}
+
+function updateMap(){
+	if(document.getElementById("map").style.display === "none"){
+		document.getElementById("map-text").innerHTML = "<i><b><u>Click to collapse map</u> ⏶</b></i>";
+		document.getElementById("map").style.display = "flex";
+	}else{
+		document.getElementById("map-text").innerHTML = "<i><b><u>Click to expand map</u> ⏷</b></i>";
+		document.getElementById("map").style.display = "none";
+	}
+
+
 }

@@ -15,6 +15,7 @@
         <li class = "navli"><a href="administrate.html">Administrate faults</a></li>
         <li class = "navli"><a href="update.html">Update fault status</a></li>
         <li class = "navli logoListItem "><a class="active logoLink" href="#index"><img class = "logo" src = "photos/ueaEstatesLogo.png"></a></li>
+        <li class = "navli rhsListItem"><a href="accessibility.html">Accessibility</a></li>
     </ul>
 </nav>
 <div style = "display: flex;">
@@ -110,7 +111,7 @@
                     <label for = "urgencies">
                         *Please select a priority level for the fault: <i>(The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here</a>)</i><br>
                     </label>
-                    <input list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required>
+                    <input id = "urgencyInput" list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required>
                     <datalist id="urgencies">
                         <option value="1">
                         <option value="2">

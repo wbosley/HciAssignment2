@@ -133,10 +133,63 @@ label {
 
 
 /*FINAL DESIGN*/
-input {
+input[type=text] {
     -webkit-appearance: none;
     -moz-appearance:    none;
     appearance:         none;
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 14px;
+    transition: 0.2s ease;
+
+}
+
+.form input {
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+#urgencyInput {
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+input[type=file] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 14px;
+    transition: 0.2s ease;
+
+}
+
+select {
+
+    border: 2px solid #5a5a5a;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px 0px;
+    font-size: 14px;
+    transition: 0.2s ease;
+
+}
+
+datalist {
+
     border: 2px solid #5a5a5a;
     border-radius: 5px;
     padding:5px;

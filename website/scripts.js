@@ -114,7 +114,7 @@ function viewDetailsUpdate(cardName){
 		card.style.cursor = "default";
 		card.style.pointerEvents = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
-		updateBreadcrumb(["Update fault status", "Incomplete", "Fault ???"], ["update.html", "updateBar(0)"]);
+		updateBreadcrumb(["Update fault status", "Incomplete", "Fault Details"], ["update.html", "updateBar(0)"]);
 	}else{
 
 	}
@@ -145,7 +145,7 @@ function viewDetailsUpdate2(cardName){
 		card.style.cursor = "default";
 		card.style.pointerEvents = "none";
 		document.getElementById("lowerDetailsDiv").style.display = "flex";
-		updateBreadcrumb(["Update fault status", "Complete", "Fault ???"], ["update.html", "updateBar(1)"]);
+		updateBreadcrumb(["Update fault status", "Complete", "Fault Details"], ["update.html", "updateBar(1)"]);
 	}else{
 
 	}

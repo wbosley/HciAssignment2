@@ -41,7 +41,7 @@ nav {
     text-align: center;
     padding: 30px 20px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-family:Arial;
 
 }
@@ -59,6 +59,10 @@ nav {
 }
 
 .logoListItem {
+    float:right;
+}
+
+.rhsListItem {
     float:right;
 }
 
@@ -234,6 +238,63 @@ input:invalid {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 10px;
+    background: #d3d3d3;
+    border-radius:5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    padding:0px;
+    margin:0px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius:15px;
+    background: #000000;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:focus {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000000;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+input[type=range]:focus {
+    -webkit-appearance: none;
+
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    padding:0px;
+    margin:0px;
+}
+
+input[type=range]:hover {
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    border-radius:5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    padding:0px;
+    margin:0px;
+}
+
 
 @keyframes flashingred{
     from{box-shadow: 0px 4px 11px -3px white}
@@ -507,4 +568,11 @@ input[type=file]::file-selector-button:hover {
     background: #000000;
     color: white;
 
+}
+
+#accessibility-div input[type=checkbox]{
+    width:20px;
+    height:20px;
+    padding:5px;
+    margin:5px 0px;
 }

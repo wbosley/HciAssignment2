@@ -15,7 +15,7 @@
         <li class = "navli"><a style="background-color: #262626;" href="administrate.html">Administrate faults</a></li>
         <li class = "navli"><a href="update.html">Update fault status</a></li>
         <li class = "logoListItem navli"><a class="active logoLink" href="#index"><img class = "logo" src = "photos/ueaEstatesLogo.png"></a></li>
-        <li class = "navli rhsListItem"><a href="accessibility.html">Accessibility</a></li>
+        <li class = "navli rhsListItem"><a href="accessibility.html"><b>Accessibility</b><br><img src="photos/access.png"></a></li>
     </ul>
 </nav>
 <div style = "display: flex;">
@@ -141,12 +141,12 @@
             </div>
             <div class = "form">
                 <fieldset>
-                    <legend>To do:</legend>
+                    <legend>Assign fault to technicians:</legend>
                     <form class = "detailsForm" onsubmit="return adminSubmitSuccess()" id="admin-form">
                         <label for = "urgencies">
-                            *Please select a priority level for the fault: <img style="align-self: center; cursor: help;" src="photos/questionmark.png"> <i style="cursor: help;">(The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here</a>)</i><br>
+                            *Please verify that the users priority level they’ve entered is correct, and if it isn't, change it. (The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here)</a> <br><br>Priority level: <br>
                         </label>
-                        <input list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required>
+                        <input list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required> <img style="align-self: center; cursor: help;" src="photos/questionmark.png">
                         <datalist id="urgencies">
                             <option value="1">
                             <option value="2">

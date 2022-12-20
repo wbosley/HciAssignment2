@@ -14,7 +14,7 @@
         <li class = "navli"><a class="active" href="index.html" style="background-color: #262626;">Reporting faults</a></li>
         <li class = "navli"><a href="administrate.html">Administrate faults</a></li>
         <li class = "navli"><a href="update.html">Update fault status</a></li>
-        <li class = "navli logoListItem "><a class="active logoLink" href="#index"><img class = "logo" src = "photos/ueaEstatesLogo.png"></a></li>
+        <li class = "navli logoListItem "><a class="active logoLink" href="#index"><img class="logo" src="photos/ueaEstatesLogo.png" alt="Image of the UEA logo that links back to the reporting a fault page."></a></li>
         <li class = "navli rhsListItem"><a href="accessibility.html">Accessibility</a></li>
     </ul>
 </nav>
@@ -60,7 +60,7 @@
                     <span class="emergencytext" id="emergencyMessage">
                         <h1> ARE YOU IN AN EMERGENCY?</h1>
                         <div style = "display:flex; flex-direction:row; justify-content: center;">
-                        <img src = "photos/warningiconsblack.png" width = "70%" margin = "20px 0px">
+                        <img alt="Image of some warning icons." src = "photos/warningiconsblack.png" width = "70%" margin = "20px 0px">
                         </div>
                         <h2 id = "emergencyHeader">Please telphone campus security on <b id = "emergencyNumber">01603 59 2121.</b></h2>
                         <p>If not, please click anywhere on this box to continue.</p>
@@ -74,12 +74,12 @@
                     <label for="location-text">*Describe, in as much detail as you can, the location of the fault:</label><br>
                     <textarea type="text" id="location-text" rows="4" cols="50" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
                     <p>If you wish, click the map and select the place where the fault occurred.</p>
-                    <img onclick="mapSelectSuccess()" style = "width:30vw" src="photos/map.png"></img>
+                    <img alt="A map of UEA." onclick="mapSelectSuccess()" style = "width:30vw" src="photos/map.png"></img>
                     <br>
                     <!--todo make the below div appear when the user clicks the map image-->
                     <div id="map-select-success" style = "display:none; flex-direction: row; align-items: center;">
                         <p><i>Map location selected successfully.</i></p>
-                        <img src = "photos/greencheck.png" height="30px">
+                        <img alt="A green check mark." src = "photos/greencheck.png" height="30px">
                     </div>
 
 
@@ -126,7 +126,7 @@
                 <!--todo make the below div appear when the user presses submit with all required inputs filled in-->
                 <div id="form-submit-success" style="display: none;">
                     <div style = "display:flex; flex-direction: row; align-items: center;">
-                        <h2>Form submitted!</h2><img height = "40px" src = "photos/greencheck.png">
+                        <h2>Form submitted!</h2><img alt="Green check mark." height = "40px" src = "photos/greencheck.png">
                     </div>
                     <p class = "successMessage">The form was submitted successfully. You should receive an confirmation email shortly confirming the report. You can see the faults you have reported in the my faults tab on the left.</p>
                 </div>
@@ -145,7 +145,7 @@
                             <p><b>Location:</b> Inside the Lawrence Stenhouse building on floor 0, in the men’s toilets just past the PC and cyber labs.</p>
                             <div class = "room" style="display:flex; flex-direction: row; ">
                                 <p style="margin-right:20px"><b>Room:</b> LSB 0.03</p>
-                                <img title="Lawrence Stenhouse Building, Floor 0, Room 0.03"style="align-self: center; cursor: help;" src="photos/questionmark.png">
+                                <img alt="Question mark."title="Lawrence Stenhouse Building, Floor 0, Room 0.03"style="align-self: center; cursor: help;" src="photos/questionmark.png">
                                 <p title="Lawrence Stenhouse Building, Floor 0, Room 0.03"><i>What does this mean?</i></p>
                             </div>
                             <p><b>Description:</b> The tap is leaking in LSB 0.03! We have a bucket underneath but you guy should come soon.</p>
@@ -160,7 +160,7 @@
                             <p><b>Location:</b> Inside the Lawrence Stenhouse building on floor 0, in the men’s toilets just past the PC and cyber labs.</p>
                             <div class = "room" style="display:flex; flex-direction: row; ">
                                 <p style="margin-right:20px"><b>Room:</b> LSB 0.03</p>
-                                <img title="Lawrence Stenhouse Building, Floor 0, Room 0.03" style="align-self: center; cursor: help;" src="photos/questionmark.png">
+                                <img alt="Question mark."title="Lawrence Stenhouse Building, Floor 0, Room 0.03" style="align-self: center; cursor: help;" src="photos/questionmark.png">
                                 <p title="Lawrence Stenhouse Building, Floor 0, Room 0.03"><i>What does this mean?</i></p>
                             </div>
                             <p><b>Description:</b> The tap is leaking in LSB 0.03! We have a bucket underneath but you guy should come soon.</p>

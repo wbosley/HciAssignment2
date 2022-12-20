@@ -250,3 +250,13 @@ function hamburgerMenu() {
 		x.style.display = "block";
 	}
 }
+
+function mapSelectSuccess(){
+	document.getElementById("map-select-success").style.display = "flex";
+}
+
+function formSubmitSuccess(){
+	event.preventDefault();
+	document.getElementById("report-form").reset();
+	document.getElementById("form-submit-success").style.display = "flex";
+}

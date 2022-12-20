@@ -24,10 +24,10 @@
         <a href="#about">My faults</a>
     </div>
 </div>
-<div style = "display: flex; border: 1px solid blue;">
+<div style = "display: flex; ">
     <!-- todo remove the border from the div below before the final upload-->
     <!-- THE DIV BELOW CONTAINS ALL CONTENT WHICH NEEDS TO BE CHANGED (e.g. content that is not UI) -->
-    <div style = "border:1px solid red; padding: 0px 40px;">
+    <div style = "padding: 0px 40px;">
 
         <script>
             var YES = true;
@@ -57,7 +57,7 @@
         </script>
         <!-- todo DELETE THIS-->
 
-        <form>
+        <form onsubmit="return formSubmitSuccess()" id="report-form">
             <!-- TODO Add accessibility options to stop form submitting without information.-->
             <fieldset>
                 <legend>Location</legend>
@@ -80,7 +80,7 @@
                 <img style = "width:30vw" src="photos/map.png"></img>
                 <br>
                 <!--todo make the below div appear when the user clicks the map image-->
-                <div style = "display:flex; flex-direction: row; align-items: center;">
+                <div id="map-select-success" style = "display:none; flex-direction: row; align-items: center;">
                     <p><i>Map location selected successfully.</i></p>
                     <img src = "photos/greencheck.png" height="30px">
                 </div>
@@ -125,10 +125,9 @@
             <input type="submit" value="Submit">
 
             <!--todo make the below div appear when the user presses submit with all required inputs filled in-->
-            <div>
+            <div id="form-submit-success" style="display: none;">
                 <div style = "display:flex; flex-direction: row; align-items: center;">
                     <h2>Success!</h2><img height = "40px" src = "photos/greencheck.png">
-
                 </div>
                 <p class = "successMessage">The form was submitted successfully. You should receive an confirmation email shortly confirming the report. You can see the faults you have reported in the my faults tab on the left.</p>
 

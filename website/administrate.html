@@ -169,18 +169,20 @@
                             <input type = "date" id = "endDate"><br>
                         </fieldset>
                         <br>
-                        <label for = "technicans">
+                        <label for="technicans">
                             *Assign technicians to fix this fault:<br>
                         </label>
-                        <input list="technicans" name="technicans" placeholder = "Andy" value = "Andy" type = "text" required>
-                        <datalist id="technicans">
-                            <option value="Andy">
-                            <option value="Bob">
-                            <option value="Chloe">
-                            <option value="Delia">
-                            <option value="Eric">
-                        </datalist>
                         <br>
+                        <select name="technicans" id="technicans">
+                            <option value="Andy">Andy</option>
+                            <option value="Bob">Bob</option>
+                            <option value="Chloe">Chloe</option>
+                            <option value="Delia">Delia</option>
+                            <option value="Eric">Eric</option>
+                        </select>
+                        <br>
+
+
                         <input type="submit" value="Submit">
 
                     </form>

@@ -62,7 +62,7 @@
             <fieldset>
                 <legend>Location</legend>
                 <label for="location-text">*Describe, in as much detail as you can, the location of the fault:</label><br>
-                <textarea type="text" id="location-text" rows="4" cols="50" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
+                <textarea type="text" id="location-text" rows="8" cols="40" placeholder="Just to the left of the north side of the bridge to the south of the lake." required></textarea><br>
 
                 <!-- todo edit this css-->
                 <div class="emergency" onclick="removeEmergencyPopup()" style="display:none;">
@@ -77,7 +77,7 @@
                 </div>
 
                 <p>If you wish, click the map and select the place where the fault occurred.</p>
-                <img onclick="mapSelectSuccess()" style = "width:30vw" src="photos/map.png">
+                <img onclick="mapSelectSuccess()" style = "width:80vw" src="photos/map.png">
                 <br>
                 <!--todo make the below div appear when the user clicks the map image-->
                 <div id="map-select-success"  style = "display:none; flex-direction: row; align-items: center;">
@@ -85,7 +85,7 @@
                     <img  src = "photos/greencheck.png" height="30px">
                 </div>
 
-                <label for="location-room">If the fault has occurred indoors and you know the room number, please write it here: <i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i></label><br>
+                <label for="location-room"><p>If the fault has occurred indoors and you know the room number, please write it here: <i>(E.g. Lec 0.01, Sci 2.37, NTF0103, etc.)</i></p></label><br>
                 <input type="text" id="location-room" placeholder="Sci 0.37"><br><br>
 
 
@@ -95,23 +95,23 @@
 
             <fieldset>
                 <legend>Description</legend>
-                <label for="description">*Describe, in as much detail as you can, what the fault is:</label><br>
-                <textarea type="text" id="description" rows="4" cols="50" placeholder="A tree has fallen across the path, blocking access for pedestrians.​" required></textarea><br><br>
+                <label for="description"><p>*Describe, in as much detail as you can, what the fault is:</p></label><br>
+                <textarea type="text" id="description" rows="8" cols="40" placeholder="A tree has fallen across the path, blocking access for pedestrians.​" required></textarea><br><br>
             </fieldset>
             <fieldset>
                 <legend>Images & Files</legend>
                 <label for="photo">If you can, attach an image or video of the fault which you think accurately portrays it:<br></label>
                 <p><i>To upload a file, press "choose file" or drag the file to upload onto the box below.</i></p>
                 <input type="file" id="photo" name="myfile" accept=".jpg,.png,.bmp,.mp4"><br><br>
-                <label for="other-file">If you wish, attach any images, videos or files you think could be helpful to the technicians:<br></label>
+                <p><label style = "font-size: 30px;" for="other-file"><p>If you wish, attach any images, videos or files you think could be helpful to the technicians:</p><br></label></p>
                 <p><i>To upload file(s), press "choose files" or drag the file(s) to upload onto the box below.</i></p>
                 <input type="file" multiple id="other-file" name="myfile" accept=".jpg,.png,.bmp,.mp4,.pdf,.docx,.txt"><br><br>
             </fieldset>
             <fieldset>
                 <legend>Urgency</legend>
-                <label for = "urgencies">
+                <p><label for = "urgencies">
                     *Please select a priority level for the fault: <i>(The meanings of the different priority levels can be read <a target="_blank" href = "https://my.uea.ac.uk/divisions/estates/our-services/report-a-fault#:~:text=PRIORITY%201%3A%C2%A0%20RESPONSE%20TIME%20OF%202%20HOURS">here</a>)</i><br>
-                </label>
+                </label></p>
                 <input list="urgencies" name="browser" placeholder = "3" value = "5" type = "number" min = "1" max = "5" required>
                 <datalist id="urgencies">
                     <option value="1">
@@ -122,7 +122,7 @@
                 </datalist>
             </fieldset>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" style="height:5vh; margin-bottom:5vh; font-size:45px;">
 
             <!--todo make the below div appear when the user presses submit with all required inputs filled in-->
             <div id="form-submit-success" style="display: none;">
